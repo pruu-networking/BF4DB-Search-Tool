@@ -199,7 +199,7 @@ func GlobalSearch(player string) {
 
 		bfdbURL := fmt.Sprint("https://bf4db.com/player/", id, "/")
 		bf4crURL := fmt.Sprint("http://bf4cheatreport.com/?pid=", id, "&uid=&cnt=200&startdate=", time.Now().Format("200601021504"))
-		bfAgency := fmt.Sprint("https://battlefield.agency/player/by-persona_id/bf4/=", id)
+		bfAgency := fmt.Sprint("https://battlefield.agency/player/by-persona_id/bf4/", id)
 		fmt.Printf("%v | %v | Cheat score = %v | %v\n Cheat Report: %v\n BF Agency: %v\n\n",
 			bfdbApi.GetData()[x].Name, bfdbApi.GetData()[x].BanReason, bfdbApi.GetData()[x].CheatScore, bfdbURL, bf4crURL, bfAgency)
 	}
